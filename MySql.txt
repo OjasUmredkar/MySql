@@ -1,0 +1,66 @@
+1. To list all records with sal > 2000 and comm>200
+
+mysql> select *
+    -> from emp
+    -> where sal>1000 and comm>200;
+
+
+
+
+2. To list all record with job=’Clerk’ or sal>2000
+
+mysql> select *
+    -> from emp
+    -> where job="clerk" and sal>1000;
+
+
+
+
+
+
+
+
+
+
+3. To list all the record with sal=1250 or 1100 or 2850
+
+mysql> select *
+    -> from emp
+    -> where sal in (1250,110,2850);
+
+
+
+
+
+4. To list all employees with sal>1250 and <2850
+
+mysql> select *
+    -> from emp
+    -> where sal between 1250 and 2850;
+
+
+
+
+
+
+
+
+5.To list all employees with name ends with ES
+
+
+mysql> select *
+    -> from emp
+    -> where ename like "%ES";
+
+
+
+
+
+mysql> select *
+    -> from emp
+    -> where ename REGEXP "ES$";
+
+
+
+
+
