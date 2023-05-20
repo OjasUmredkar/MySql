@@ -15,13 +15,6 @@ mysql> select *
 
 
 
-
-
-
-
-
-
-
 3. To list all the record with sal=1250 or 1100 or 2850
 
 mysql> select *
@@ -40,11 +33,6 @@ mysql> select *
 
 
 
-
-
-
-
-
 5.To list all employees with name ends with ES
 
 
@@ -59,6 +47,73 @@ mysql> select *
 mysql> select *
     -> from emp
     -> where ename REGEXP "ES$";
+
+
+
+
+6. To list all employees with job starts with C and ends with K
+
+ mysql> select *
+    -> from emp
+    -> where job like "c%k";
+
+
+
+mysql> select *
+    -> from emp
+    -> where job REGEXP "^c.*k$";
+
+
+
+
+7. To list all employees with job contains L at third position and
+M at third last position
+
+mysql> select *
+    -> from emp
+    -> where job like "__l%m__";
+
+
+
+
+mysql> select *
+    -> from emp
+    -> where job REGEXP "^..L.*M..$";
+
+
+
+
+8. To list all the record with sal not equal to 1250 or 1100 or 2850
+
+mysql> select *
+    -> from emp
+    -> where sal not in (1100,1250,2850);
+
+
+
+9. To list all employees with sal not >1250 and <2850
+
+mysql> select *
+    -> from emp
+    -> where sal not between 1250 and 2850;
+
+
+
+
+10. To list all employees with job starts with C , E at 3rd position and ends with K
+
+mysql> select *
+    -> from emp
+    -> where job like "C_e%k";
+
+
+
+mysql> select *
+    -> from emp
+    -> where job REGEXP "^c.e.*k$";
+
+
+
 
 
 
