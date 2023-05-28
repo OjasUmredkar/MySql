@@ -437,6 +437,56 @@ mysql> select *
 
 
 
+SINGLE ROW FUNCTION
+
+1. To list all employees and their email, to generate email use 2 to 5 characters from ename. Concat it with 2 to 4 characters in job and then concat it with ‘@mycompany.com’
+
+mysql> select empno, ename, job, concat(substr(ename,2,5),".",substr(job,2,4),"@mycompany.com") email
+    -> from emp;
+
+
+
+
+
+
+2. List all employees who joined in September.
+
+mysql> select *
+    -> from emp
+    -> where monthname(hiredate)='september';
+
+
+
+
+
+3. List the empno, name, and department number of the emp who have experience of 18 or more years and sort them based on their experience.
+
+mysql> select empno,ename,deptno,hiredate,floor(datediff(curdate(),hiredate)/365) experience
+    -> from emp
+    -> where floor(datediff(curdate(),hiredate)/365)>18
+    -> order by experience;
+
+
+
+
+
+
+4. Display the employee details who joined on 3rd of any month or any year
+
+mysql> select *
+    -> from emp
+    -> where day(hiredate)=3;
+
+
+5. display all employees who joined between years 1981 to 1983.
+
+mysql> select * from emp
+    -> where year(hiredate) between '1981' and '1983';
+
+
+
+
+
 
 
 
