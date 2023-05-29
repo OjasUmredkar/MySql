@@ -486,6 +486,40 @@ mysql> select * from emp
 
 
 
+GROUP FUNCTIONS
+
+6. Display the Highest, Lowest, Total & Average salary of all employee. Label the columns
+Maximum, Minimum, Total and Average respectively for each Department. Also round the
+result to the nearest whole number.
+
+mysql> select deptno, round(max(sal)) Maximum, round(min(sal)) Minimum,round(sum(sal)) Total, round(avg(sal)) Average
+    -> from emp
+    -> group by deptno;
+
+
+
+
+
+7. Display Department no and number of managers working in that department. Label the
+column as ‘Total Number of Managers’ for each department.
+
+mysql> select deptno,count(job) "Total number of managers"
+    -> from emp
+    -> where job='manager'
+    -> group by deptno;
+
+
+
+8. Get the Department number, and sum of Salary of all non managers where the sum is
+greater than 20000.
+
+mysql> select deptno, sum(sal)
+    -> from emp
+    -> where job!='manager'
+    -> group by deptno
+    -> having sum(sal)>2000;
+
+
 
 
 
