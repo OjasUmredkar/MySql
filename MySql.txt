@@ -23,15 +23,15 @@
 Q1. To find all managers with salary >1500.
 
 mysql> select *
-    -> from emp
-    -> where job='manager' and sal>1500;
+      from emp
+      where job='manager' and sal>1500;
 
 
 
 Q2. list all employees with sal >1200 and < 2000
 
 mysql> select * from emp
-    -> where sal between 1200 and 2000;
+      where sal between 1200 and 2000;
 
 
 
@@ -44,8 +44,8 @@ mysql> select * from emp
 
 Q 3. list all employees with sal is 1600 or sal is 800 or sal is 1900
 mysql> select *
-    -> from emp
-    -> where sal in (1600,800,1900);
+      from emp
+      where sal in (1600,800,1900);
 
 
 
@@ -53,25 +53,25 @@ mysql> select *
 Q 4. list all employees with R at second last position in name
 
 mysql> select *
-    -> from emp
-    -> where ename like "%n_";
+      from emp
+      where ename like "%n_";
 
 
 
 mysql> select *
-    -> from emp
-    -> where ename REGEXP "^.*n.$";
+      from emp
+      where ename REGEXP "^.*n.$";
 
 Q 5. List all employees with name starts with A and ends with N
 mysql> select *
-    -> from emp
-    -> where ename like 'a%n';
+      from emp
+      where ename like 'a%n';
 
 
 
 mysql> select *
-    -> from emp
-    -> where ename REGEXP "^a.*n$";
+      from emp
+      where ename REGEXP "^a.*n$";
 
 
 
@@ -576,7 +576,60 @@ greater than 20000.
 
 
 
-dfdfsdfdfsf
+
+Q1. To find all managers with salary >1500.
+
+mysql> select *
+      from emp
+      where job='manager' and sal>1500;
+
+
+
+Q2. list all employees with sal >1200 and < 2000
+
+mysql> select * from emp
+      where sal between 1200 and 2000;
+
+
+
+
+
+
+
+
+
+
+Q 3. list all employees with sal is 1600 or sal is 800 or sal is 1900
+mysql> select *
+      from emp
+      where sal in (1600,800,1900);
+
+
+
+
+Q 4. list all employees with R at second last position in name
+
+mysql> select *
+      from emp
+      where ename like "%n_";
+
+
+
+mysql> select *
+      from emp
+      where ename REGEXP "^.*n.$";
+
+Q 5. List all employees with name starts with A and ends with N
+mysql> select *
+      from emp
+      where ename like 'a%n';
+
+
+
+mysql> select *
+      from emp
+      where ename REGEXP "^a.*n$";
+
 
 
 
