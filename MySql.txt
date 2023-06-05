@@ -631,6 +631,33 @@ mysql> select *
       where ename REGEXP "^a.*n$";
 
 
+Q2. Solve following
+1. list all employees with salary > 1250 and dept no=30
+mysql> select *
+  from emp
+  where sal>1250 and deptno=30;
+
+ 
+2. list all employees with salary >=1250 and <= 3000
+mysql> select *
+	  from emp
+	  where sal between 1250 and 3000;
+ 3. list all employees with salary >1250 and < 3000
+mysql> select *
+	  from emp
+	  where sal between 1249 and 2999;
+ 
+4. list all employees with salary either equal to 3000 or 1250 or 2500
+mysql> select *
+	  from emp
+	  where sal in (1250,2500,3000);
+ 
+ 
+ 5.  list all employee with name=SMITH
+mysql> select *
+	  from emp
+	  where ename = 'smith';
+ 
 
 
 
